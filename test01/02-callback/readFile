@@ -1,0 +1,12 @@
+var fs=require("fs");
+
+//--------同步读取------------
+var data=fs.readFileSync("../resources/input.txt");
+console.log("No1:"+data.toString());
+console.log("程序执行结束")
+
+//-------异步读取--------
+fs.readFile("../resources/input.txt",function (err,data) {
+    console.log("No2:"+data);
+});
+console.log("程序执行结束2");
